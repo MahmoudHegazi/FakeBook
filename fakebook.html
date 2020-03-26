@@ -1,4 +1,4 @@
-﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <title>Fake Book</title>
@@ -298,14 +298,14 @@ Throughout his career, John has helped brands expand, monitor, and measure their
 function searchFunction() { 
 
   // Users Images links syntax(user + "I" = link)
-var ahmedImage = "https://previews.123rf.com/images/gmast3r/gmast3r1411/gmast3r141100280/33645487-profile-icon-male-avatar-portrait-casual-person.jpg";
+  var ahmedImage = "https://previews.123rf.com/images/gmast3r/gmast3r1411/gmast3r141100280/33645487-profile-icon-male-avatar-portrait-casual-person.jpg";
+  var mohamedImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfTTIGpl0hE78ikkC76YenLZi-OiZyW2guFjkGxEdaEdMB4SK4";
+  var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg";
 
-var mohamedImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfTTIGpl0hE78ikkC76YenLZi-OiZyW2guFjkGxEdaEdMB4SK4";
-
-var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg";
-
-  // User cerdientals 
-
+//Fake Database for user names
+  let database_users = ["ahmed", "mohamed", "amira"]; 
+  
+ // User cerdientals 
   
   // layout controll tools
   var myUl = document.getElementById("myUl1");
@@ -313,24 +313,25 @@ var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-p
   
   // after log div
   
-  var userID = document.getElementById("userId");
-  
-  var x = document.getElementById("myImg");
-  
+  var userID = document.getElementById("userId");  
+  var x = document.getElementById("myImg");  
   var userName = document.getElementById("myH1");
-
-  var aboutName = document.getElementById("spanName");
-  
-  var newDiv = document.getElementById("aboutDiv");
-  
-  var prfBtn = document.getElementById("profileButton");
-  
-  var addBtn = document.getElementById("addButton");
-  
-  var userSearch = document.getElementById("searchInput");
-  
+  var aboutName = document.getElementById("spanName");  
+  var newDiv = document.getElementById("aboutDiv");  
+  var prfBtn = document.getElementById("profileButton");  
+  var addBtn = document.getElementById("addButton");  
+  var userSearch = document.getElementById("searchInput");  
   var srcBtn = document.getElementById("searchButton");
   
+  
+  // check database for users if username not exist return sorry user not exist
+  
+  var check_database = database_users.includes(userSearch.value);
+  
+  while (check_database === false) {
+     alert("Sorry User With Name: " + userSearch.value + " Not Exist.Try Search For Amira or mohamed or\  ahmed");
+     break;
+  }
   if (userSearch.value == "ahmed" && userID.innerHTML != "ahmed") {
     myUl.style.display = "none";
     
