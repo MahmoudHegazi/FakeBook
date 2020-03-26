@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Fake Book</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  background-color: black;
+  margin: auto;
+  padding: auto;
+  
+}
+
+#main {
+  border: 2px solid gold;
+  
+ 
+ 
+}
+h1 {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  color: white;
+}
+
+div.demoCo {
+  width: 595px;
+  border: 2px solid gold;
+  border-radius: 4%;
+  margin-left: 12%;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: white;
+}
+.demoCo h3 {
+  color: green;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.afterDiv { 
+  width: 595px;
+  border: 2px solid gold;
+  border-radius: 4%;
+  margin-left: 12%;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.afterDiv h3 {
+  color: green;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#myUl1 li {
+  color: white;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div id="main">
+<span id="userId"></span>
+
+<h1 id="myH1">This is a Heading</h1>
+
+
+
+<ul id="myUl1">
+<li>First Go to school.</li>
+<li>Second Go to GYM.</li>
+<li>third Eat Your Lunch.</li>
+<li>fourth Study HTML.</li>
+<li>Last Sleep and HF.</li>
+</ul>
+<br />
+<div class="demoCo">
+<h3>My Header</h3>
+<p>This is a paragraph This is a paragraph This is a paragraph This is a paragraph
+This is a paragraphThis is a paragraph This is a paragraph This is a paragraph.
+This is a paragraph This is a paragraph This is a paragraph</p>
+</div>
+
+<div class="demoCo">
+<h3>My Header</h3>
+<p>This is a paragraph This is a paragraph This is a paragraph This is a paragraph
+This is a paragraphThis is a paragraph This is a paragraph This is a paragraph.
+This is a paragraph This is a paragraph This is a paragraph</p>
+</div>
+
+<div class="demoCo mform">
+<h3>My Form</h3>
+<p></p>
+
+<div id="fakeForm" class="fakeform">
+
+<label>User Name:</label>
+<input type="text" id="userInput">
+<button type="button" onclick="signFunction()" class="singButton" id="sibutton">
+Si Up
+</button>
+<br /><br />
+<label>u.password:</label>
+<input type="text" id="passInput">
+<button type="button" onclick="logFunction()" class="logButton" id="logbutton">
+Login
+</button>
+<br /><br /><br />
+</div>
+
+</div>
+<br /><br />
+
+
+<!-- after click tags -->
+
+<img src="" class="myImages" id="myImg" width="300" height="250" style="display:none;">
+<button type="button" id="profileButton" onclick="profile()"  style="display:none;">Profile</button>
+
+<button type="button" id="addButton" onclick="addFunction()"  style="display:none;">send friend request</button>
+
+<!-- search failed -->
+<input type="text" id="searchInput" value="" style="display:none;">
+<button type="button" id="searchButton" style="display:none;" onclick="searchFunction()">
+Search</button>
+
+<br /><br />
+<div class="afterDiv" id="aboutDiv" style="display:none;">
+<h3>About <span id="spanName"></span></h3>
+<p>This is a paragraph This is a paragraph This is a paragraph This is a paragraph
+This is a paragraphThis is a paragraph This is a paragraph This is a paragraph.
+This is a paragraph This is a paragraph This is a paragraph</p>
+</div>
+
+
+</div>
+
+<script>
+
+let ahmedList = [];
+let mohamedList = [];
+let amiraList = [];
+
+
+function logFunction() { 
+
+  // Users Images links syntax(user + "I" = link)
+var ahmedImage = "https://previews.123rf.com/images/gmast3r/gmast3r1411/gmast3r141100280/33645487-profile-icon-male-avatar-portrait-casual-person.jpg";
+
+var mohamedImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfTTIGpl0hE78ikkC76YenLZi-OiZyW2guFjkGxEdaEdMB4SK4";
+
+var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg";
+
+  // User cerdientals 
+  var user = document.getElementById("userInput");
+  var password = document.getElementById("passInput");
+  
+  // layout controll tools
+  var myUl = document.getElementById("myUl1");
+  var getDiv = document.getElementsByClassName("demoCo");
+  
+  // after log div
+  
+  
+  var x = document.getElementById("myImg");
+  
+  var userID = document.getElementById("userId");
+  
+  var userName = document.getElementById("myH1");
+
+  var aboutName = document.getElementById("spanName");
+  
+  var newDiv = document.getElementById("aboutDiv");
+  
+  var prfBtn = document.getElementById("profileButton");
+  
+  var userSearch = document.getElementById("searchInput");
+  
+  var srcBtn = document.getElementById("searchButton");
+  
+  if (user.value == "ahmed" && password.value == "123") {
+    myUl.style.display = "none";
+    userID.innerHTML = user.value;
+    getDiv[0].style.display = "none";
+    getDiv[1].style.display = "none";
+    getDiv[2].style.display = "none";
+    
+   
+    x.src = ahmedImage;
+    x.style.display = "block";
+    
+    userName.innerHTML = "Hello Mr: " + user.value;
+    aboutName.innerHTML = user.value;
+    newDiv.style.display = "block";
+    prfBtn.style.display = "inline";
+    userSearch.style.display = "inline";
+    srcBtn.style.display = "inline";
+    
+    
+  }
+  
+    if (user.value == "mohamed" && password.value == "123") {
+    myUl.style.display = "none";
+    userID.innerHTML = user.value;
+    getDiv[0].style.display = "none";
+    getDiv[1].style.display = "none";
+    getDiv[2].style.display = "none";
+    x.src = mohamedImage;
+    x.style.display = "block";
+    userName.innerHTML = "Hello Mr: " + user.value;
+    aboutName.innerHTML = user.value;
+    newDiv.style.display = "block";
+    prfBtn.style.display = "inline";
+    userSearch.style.display = "inline";
+    srcBtn.style.display = "inline";
+  }
+  
+    if (user.value == "amira" && password.value == "123") {
+    myUl.style.display = "none";
+    userID.innerHTML = user.value;
+    getDiv[0].style.display = "none";
+    getDiv[1].style.display = "none";
+    getDiv[2].style.display = "none";
+    
+    x.src = amiraImage;
+    x.style.display = "block";
+    userName.innerHTML = "Hello Mss: " + user.value;
+    aboutName.innerHTML = user.value;
+    newDiv.style.display = "block";
+    prfBtn.style.display = "inline";
+    userSearch.style.display = "inline";
+    srcBtn.style.display = "inline";
+    
+  }
+  
+}
+
+function searchFunction() { 
+
+  // Users Images links syntax(user + "I" = link)
+var ahmedImage = "https://previews.123rf.com/images/gmast3r/gmast3r1411/gmast3r141100280/33645487-profile-icon-male-avatar-portrait-casual-person.jpg";
+
+var mohamedImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQfTTIGpl0hE78ikkC76YenLZi-OiZyW2guFjkGxEdaEdMB4SK4";
+
+var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-profile-icon-round-woman-face-vector-18307274.jpg";
+
+  // User cerdientals 
+
+  
+  // layout controll tools
+  var myUl = document.getElementById("myUl1");
+  var getDiv = document.getElementsByClassName("demoCo");
+  
+  // after log div
+  
+  var userID = document.getElementById("userId");
+  
+  var x = document.getElementById("myImg");
+  
+  var userName = document.getElementById("myH1");
+
+  var aboutName = document.getElementById("spanName");
+  
+  var newDiv = document.getElementById("aboutDiv");
+  
+  var prfBtn = document.getElementById("profileButton");
+  
+  var addBtn = document.getElementById("addButton");
+  
+  var userSearch = document.getElementById("searchInput");
+  
+  var srcBtn = document.getElementById("searchButton");
+  
+  if (userSearch.value == "ahmed" && userID.innerHTML != "ahmed") {
+    myUl.style.display = "none";
+    
+    getDiv[0].style.display = "none";
+    getDiv[1].style.display = "none";
+    getDiv[2].style.display = "none";
+    
+   
+    x.src = ahmedImage;
+    x.style.display = "block";
+    
+    userName.innerHTML = "Profile of: " + userSearch.value;
+    aboutName.innerHTML = userSearch.value;
+    newDiv.style.display = "block";
+    prfBtn.style.display = "none";
+    addBtn.style.display = "inline";  
+    userSearch.style.display = "inline";
+    srcBtn.style.display = "inline";
+    
+    
+  }
+  
+    if (userSearch.value == "mohamed" && userID.innerHTML != "mohamed") {
+    myUl.style.display = "none";
+    getDiv[0].style.display = "none";
+    getDiv[1].style.display = "none";
+    getDiv[2].style.display = "none";
+    x.src = mohamedImage;
+    x.style.display = "block";
+    userName.innerHTML = "Profile of: " + userSearch.value;
+    aboutName.innerHTML = userSearch.value;
+    newDiv.style.display = "block";
+    prfBtn.style.display = "none";
+    addBtn.style.display = "inline";
+    userSearch.style.display = "inline";
+    srcBtn.style.display = "inline";
+    
+    
+    if (userID.innerHTML == "ahmed") {
+      var checkAhmed = ahmedList.includes(aboutName);
+      if (checkAhmed == true) {
+        addBtn.innerHTML = "Send a friend Request";
+      } else {
+        addBtn.innerHTML = "Pending a request";
+      }
+    }
+    
+    if (userID.innerHTML == "mohamed") {
+      var checkMohamed = mohamedList.includes(aboutName);
+      if (checkMohamed == true) {
+        addBtn.innerHTML = "Send a friend Request";
+      } else {
+        addBtn.innerHTML = "Pending a request";
+      }
+    }
+    
+    if (userID.innerHTML == "amira") {
+      var checkAmira = amiraList.includes(aboutName);
+      if (checkAmira == true) {
+        addBtn.innerHTML = "Send a friend Request";
+      } else {
+        addBtn.innerHTML = "Pending a request";
+      }
+    }
+  }
+  
+    if (userSearch.value == "amira" && userID.innerHTML != "amira") {
+    myUl.style.display = "none";
+    getDiv[0].style.display = "none";
+    getDiv[1].style.display = "none";
+    getDiv[2].style.display = "none";
+    
+    x.src = amiraImage;
+    x.style.display = "block";
+    userName.innerHTML = "Profile of: " + userSearch.value;
+    aboutName.innerHTML = userSearch.value;
+    newDiv.style.display = "block";
+    prfBtn.style.display = "none";
+    addBtn.style.display = "inline";
+    userSearch.style.display = "inline";
+    srcBtn.style.display = "inline";
+    
+  } else if(userSearch.value == "ahmed" && userID.innerHTML == "ahmed") {
+  
+    alert("Sorry " + userID.innerHTML + " You can't search for yourself click profile insted")
+    
+  } else if(userSearch.value == "mohamed" && userID.innerHTML == "mohamed") {
+  
+    alert("sorry " + userID.innerHTML + " You can't search for yourself click profile insted")
+    
+  } else if(userSearch.value == "amira" && userID.innerHTML == "amira") {
+  
+    alert("sorry " + userID.innerHTML + "Miss Amira You can't search for yourself click profile insted")
+  }
+  
+}
+
+// add function
+
+function addFunction() {
+   var userID = document.getElementById("userId");
+   var aboutName = document.getElementById("spanName");
+   var addBtn = document.getElementById("addButton");
+   
+   if (userID.innerHTML == "ahmed") {
+   ahmedList.push(aboutName);
+   alert("Please make sure your send request to presons you know");
+   addBtn.innerHTML = "Pendding request..";
+   
+   var checkAhmed = ahmedList.includes(aboutName);
+   
+   if (checkAhmed == true) {
+    addBtn.innerHTML = "Pendding request..";
+   } else {
+    addBtn.innerHTML = "Send a friend request..";
+   }
+   } 
+   
+   if (userID.innerHTML == "mohamed") {
+   mohamedList.push(aboutName);
+   alert("Please make sure your send request to presons you know");
+   addBtn.innerHTML = "Pendding request..";
+   
+   var checkMohamed = mohamedList.includes(aboutName);
+   
+   if (checkMohamed == true) {
+    addBtn.innerHTML = "Pendding request...";
+   } else {
+    addBtn.innerHTML = "Send a friend request";
+   }
+   } 
+   
+   if (userID.innerHTML == "amira") {
+   amiraList.push(aboutName);
+   alert("Please make sure your send request to presons you know");
+   addBtn.innerHTML = "Pendding request..";
+   
+   var checkAmira = amiraList.includes(aboutName);
+   
+   if (checkAmira == true) {
+    addBtn.innerHTML = "Pendding request..";
+   } else {
+    addBtn.innerHTML = "Send a friend request..";
+   }
+   } 
+       
+   /*   alert("Please make sure your send request to presons you know");
+   
+   var ahmedCheck = ahmedList.includes(aboutName);
+   var mohamedCheck = mohamedList.includes(aboutName);
+   var amiraCheck = amiraList.includes(aboutName);
+   
+   if (userID == "ahmed" && ahmedCheck == true) { 
+   
+   addBtn.innerHTML = "Pendding request..";
+   
+   } else {   
+   addBtn.innerHTML = "send friend request";
+   }
+      */
+}
+
+
+
+
+function signFunction() { 
+  var getDiv = document.getElementsByClassName("demoCo");  
+  var myUl = document.getElementById("myUl1");
+  
+    myUl.style.display = "none";
+    getDiv[0].style.display = "none";
+    getDiv[1].style.display = "none";
+    getDiv[2].style.display = "none";
+    
+  
+}
+
+
+
+</script>
+</body>
+</html>
