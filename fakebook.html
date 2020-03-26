@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿﻿﻿<!DOCTYPE html>
 <html>
 <head>
 <title>Fake Book</title>
@@ -173,7 +173,7 @@ Search</button>
 <br /><br />
 <div class="afterDiv" id="aboutDiv" style="display:none;">
 <h3>About <span id="spanName"></span></h3>
-<p>This is a paragraph This is a paragraph This is a paragraph This is a paragraph
+<p id="user_about">This is a paragraph This is a paragraph This is a paragraph This is a paragraph
 This is a paragraphThis is a paragraph This is a paragraph This is a paragraph.
 This is a paragraph This is a paragraph This is a paragraph</p>
 </div>
@@ -188,6 +188,7 @@ let ahmedList = [];
 let mohamedList = [];
 let amiraList = [];
 
+let about = document.getElementById("user_about");
 
 function logFunction() { 
 
@@ -243,6 +244,10 @@ var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-p
     userSearch.style.display = "inline";
     srcBtn.style.display = "inline";
     
+    about.innerHTML = "I\'m Ahmed, I\'m Python Web Developer, I can use Python to create Database <br > \
+    and to fill it with data using .py app, then use flask to create web app or web server  <br> \
+     and make my own templates then add them into templates folder and add images  <br>  and script, \
+    in static folders, then let my web server handle watch page should be open ";
     
   }
   
@@ -260,6 +265,10 @@ var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-p
     prfBtn.style.display = "inline";
     userSearch.style.display = "inline";
     srcBtn.style.display = "inline";
+    
+    about.innerHTML = "art director at Schlumberger and a digital brand strategist with 15 years of agency experience.\
+Throughout his career, John has helped brands expand, monitor, and measure their digital presence and \ influence. Synthesizing a keen understanding of design, its impact on brands and corporate culture, John\ works with clients to develop cross-platform brand strategies, core messaging, and marketing campaigns for\ the oil and gas, health care, and biomedical sectors. Dedicated to staying on the forefront of marketing\ trends, consumer behavior, and new media, he is familiar with the opportunities and limitations of various\ platforms and technologies in how these can communicate aspects of an organization's brand. John works\ closely with clients and key stakeholders to utilize design as a strategic business tool, to help\ transform leadership vision into concrete corporate goals.";
+
   }
   
     if (user.value == "amira" && password.value == "123") {
@@ -277,6 +286,10 @@ var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-p
     prfBtn.style.display = "inline";
     userSearch.style.display = "inline";
     srcBtn.style.display = "inline";
+    
+    about.innerHTML = "i graduated at 2017 from FCIS ASU ,i have a passion to learn new technologies and\ take challenge of everything,now am working as a xamarin developer ,i am to improve myself in mobile\ developing using xamrain as it have some challenges";
+
+
     
   }
   
@@ -337,6 +350,12 @@ var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-p
     userSearch.style.display = "inline";
     srcBtn.style.display = "inline";
     
+    about.innerHTML = "I\'m Ahmed, I\'m Python Web Developer, I can use Python to create Database <br > \
+    and to fill it with data using .py app, then use flask to create web app or web server  <br> \
+     and make my own templates then add them into templates folder and add images  <br>  and script, \
+    in static folders, then let my web server handle watch page should be open ";
+    
+    
     
   }
   
@@ -354,6 +373,17 @@ var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-p
     addBtn.style.display = "inline";
     userSearch.style.display = "inline";
     srcBtn.style.display = "inline";
+    
+    about.innerHTML = "art director at Schlumberger and a digital brand strategist with 15 years \
+    of agency experience.\
+    Throughout his career, John has helped brands expand, monitor, and measure their digital presence and \      influence. Synthesizing a keen understanding of design, its impact on brands and corporate culture, \      John works with clients to develop cross-platform brand strategies,\
+     core messaging, and marketing campaigns for the oil and gas, health care, \
+     and biomedical sectors. Dedicated to staying on the \
+     forefront of marketing trends, consumer behavior, and new media, he is familiar with the \
+     pportunities and limitations of various platforms and technologies in how these can communicate\
+     aspects of an organization's brand. John works closely with clients and key stakeholders\
+     to utilize design as a strategic business tool, to help transform leadership vision into\
+     concrete corporate goals.";
     
     
     if (userID.innerHTML == "ahmed") {
@@ -399,6 +429,10 @@ var amiraImage = "https://cdn5.vectorstock.com/i/1000x1000/72/74/female-avatar-p
     addBtn.style.display = "inline";
     userSearch.style.display = "inline";
     srcBtn.style.display = "inline";
+    
+        
+    about.innerHTML = "i graduated at 2017 from FCIS ASU ,i have a passion to learn new technologies and\ take challenge of everything,now am working as a xamarin developer ,i am to improve myself in mobile\ developing using xamrain as it have some challenges";
+
     
   } else if(userSearch.value == "ahmed" && userID.innerHTML == "ahmed") {
   
